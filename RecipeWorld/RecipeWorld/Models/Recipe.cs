@@ -22,6 +22,7 @@ namespace RecipeWorld.Models
         public String Title { get; set; }
 
         [Required]
+        [Display(Name ="Recipe")]
         public String Contents { get; set; }
 
         [Required]

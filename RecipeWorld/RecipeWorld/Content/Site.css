@@ -22,3 +22,11 @@ select,
 textarea {
     max-width: 280px;
 }
+/* Suim */
+.form-control{
+    height:35px;
+}
+
+form div{
+    margin-bottom:10px;
+}
