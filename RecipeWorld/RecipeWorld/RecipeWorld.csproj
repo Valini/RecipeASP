@@ -285,6 +285,9 @@
     <Content Include="Views\Recipe\Index.cshtml" />
     <Content Include="Views\ReadRecipe\Index.cshtml" />
     <Content Include="Views\WriteRecipe\Index.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_NavBarSandStone.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

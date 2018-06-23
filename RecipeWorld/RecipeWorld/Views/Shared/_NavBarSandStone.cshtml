@@ -1,0 +1,25 @@
+﻿<nav class="navbar navbar-inverse" margin-left:200px">
+    <div class="container-fluid" style="margin-left:200px">
+        <div class="navbar-header" >
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("World Recipes Blog", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <!--<a class="navbar-brand" href="#">World Recipes Blog</!--a>-->
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Recipe", "Index", "Recipe")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+            
+        </div>
+    </div>
+</nav>
