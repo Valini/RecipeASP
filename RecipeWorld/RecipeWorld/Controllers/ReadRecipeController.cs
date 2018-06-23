@@ -9,8 +9,10 @@ namespace RecipeWorld.Controllers
     public class ReadRecipeController : Controller
     {
         // GET: ReadRecipe
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
+
+
             return View();
         }
     }
