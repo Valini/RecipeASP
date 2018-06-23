@@ -1,9 +1,23 @@
 ﻿@model RecipeWorld.ViewModel.RecipeFormViewModel
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<br /><h2>Small Batch Black Pepper Parmesan Chive Biscuit Recipe</h2><br />
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Html.LabelFor(m => m.Recipe.Title)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- I am working i need. I recive error so i can't test -->
+    </tbody>
+</table>
+
+
+
+
 <div>
     <div>
         <img src="~/RecipeImageFiles/2_1.jpg" style="width:70%;margin:auto" />

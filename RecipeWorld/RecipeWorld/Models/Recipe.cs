@@ -28,9 +28,8 @@ namespace RecipeWorld.Models
         [Required]
         public String Ingredients { get; set; }
 
-        public User User { get; set; }
         [Required]
-        public int UserId { get; set; }
+        public String Email { get; set; }
 
         [Required]
         public int ViewCount { get; set; }
