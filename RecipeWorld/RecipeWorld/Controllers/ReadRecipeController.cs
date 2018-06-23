@@ -35,7 +35,7 @@ namespace RecipeWorld.Controllers
             var viewModel = new RecipeFormViewModel
             {
                 Recipe = recipeInDB,
-                RecipeFiles = _context.RecipeFiles.ToList() // Get the image of recipe
+                //RecipeFiles = _context.RecipeFiles.ToList() // Get the image of recipe
             };
 
             return View(viewModel);

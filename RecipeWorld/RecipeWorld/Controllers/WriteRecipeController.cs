@@ -59,9 +59,9 @@ namespace RecipeWorld.Controllers
             _context.SaveChanges();
 
             // 2. Save Recipe Files
-            if (viewModel.RecipeFiles.Count > 0)
+            if (viewModel.RecipeFiles.Count() > 0)
             {
-                List<HttpPostedFileBase> ojbImage = viewModel.RecipeFiles;
+                List<HttpPostedFileBase> ojbImage = (List <HttpPostedFileBase>)viewModel.RecipeFiles;
                 foreach (var file in ojbImage)
                 {
                     if (file != null && file.ContentLength > 0)
