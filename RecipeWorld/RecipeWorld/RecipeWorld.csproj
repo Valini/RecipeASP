@@ -203,14 +203,17 @@
     <Compile Include="Migrations\201806200332203_InitialMigration.Designer.cs">
       <DependentUpon>201806200332203_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806231851055_removeUserTable.cs" />
+    <Compile Include="Migrations\201806231851055_removeUserTable.Designer.cs">
+      <DependentUpon>201806231851055_removeUserTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\RecipeComment.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\RecipeFile.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\RecipeFormViewModel.cs" />
@@ -303,6 +306,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806200332203_InitialMigration.resx">
       <DependentUpon>201806200332203_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806231851055_removeUserTable.resx">
+      <DependentUpon>201806231851055_removeUserTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

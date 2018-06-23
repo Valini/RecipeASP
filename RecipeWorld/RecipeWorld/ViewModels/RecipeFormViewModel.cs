@@ -10,6 +10,6 @@ namespace RecipeWorld.ViewModel
     public class RecipeFormViewModel
     {
         public Recipe Recipe { get; set; }
-        public List<RecipeFile> RecipeFiles { get; set; }
+        public List<HttpPostedFileBase> RecipeFiles { get; set; }
     }
 }
