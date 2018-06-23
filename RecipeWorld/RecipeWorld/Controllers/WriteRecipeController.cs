@@ -38,14 +38,13 @@ namespace RecipeWorld.Controllers
         public ActionResult Save(RecipeFormViewModel viewModel)
         {
             // 1. Save Recipe
-            /*
             Recipe recipe = viewModel.Recipe;
 
             if(recipe.Id == 0)
             {
                 _context.Recipes.Add(recipe);
             }
-            */
+            /*
             Recipe recipe = new Recipe();
             recipe.Email = "abc";
             recipe.Title = "abc";
@@ -54,6 +53,7 @@ namespace RecipeWorld.Controllers
             recipe.CreateDate = DateTime.Now;
             recipe.ModifiedDate = DateTime.Now;
             recipe.ViewCount = 0;
+            */
             recipe = _context.Recipes.Add(recipe);
 
             _context.SaveChanges();
