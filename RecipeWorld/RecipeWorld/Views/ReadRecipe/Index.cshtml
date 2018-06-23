@@ -7,11 +7,16 @@
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>@Html.LabelFor(m => m.Recipe.Title)</th>
+            <th>@Html.DisplayNameFor(m => m.Recipe.Title)</th>
+            <th>@Html.DisplayFor(m => m.Recipe.Title)</th>
         </tr>
     </thead>
     <tbody>
         <!-- I am working i need. I recive error so i can't test -->
+        @foreach (var item in Model.RecipeFiles)
+        {
+            @Html.DisplayFor(m => item.ImgFile)
+        }
     </tbody>
 </table>
 
@@ -52,7 +57,7 @@
         <div class="row">
             <!--<div class="col col-sm-6 d-flex justify-content-start">-->
             <div>
-                <img src="~/Images/pencil2.gif" style="padding-left:30px;"/>
+                <img src="~/Images/pencil2.gif" style="padding-left:30px;" />
             </div>
         </div>
 
@@ -84,3 +89,4 @@
             </div>
         </div>
     </div>
+</div>

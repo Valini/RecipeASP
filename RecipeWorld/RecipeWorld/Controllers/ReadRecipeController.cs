@@ -32,7 +32,6 @@ namespace RecipeWorld.Controllers
 
             }
 
-            
             var viewModel = new RecipeFormViewModel
             {
                 Recipe = recipeInDB,
