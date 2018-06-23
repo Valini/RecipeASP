@@ -54,18 +54,30 @@ namespace RecipeWorld.Controllers
             recipe.CreateDate = DateTime.Now;
             recipe.ModifiedDate = DateTime.Now;
             recipe.ViewCount = 0;
-            _context.Recipes.Add(recipe);
+            recipe = _context.Recipes.Add(recipe);
 
+            _context.SaveChanges();
 
             // 2. Save Recipe Files
-            List<HttpPostedFileBase> ojbImage = viewModel.RecipeFiles;
-            foreach (var file in ojbImage)
+            if (viewModel.RecipeFiles.Count > 0)
             {
-                if (file != null && file.ContentLength > 0)
+                List<HttpPostedFileBase> ojbImage = viewModel.RecipeFiles;
+                foreach (var file in ojbImage)
                 {
-                    file.SaveAs(Path.Combine(Server.MapPath("~/Images"), Guid.NewGuid() + Path.GetExtension(file.FileName)));
+                    if (file != null && file.ContentLength > 0)
+                    {
+                        RecipeFile recipeFile = new RecipeFile();
+                        recipeFile.ImgFile = Guid.NewGuid() + Path.GetExtension(file.FileName);
+                        recipeFile.RecipeId = recipe.Id;
+
+                        file.SaveAs(Path.Combine(Server.MapPath("~/RecipeImageFiles"), recipeFile.ImgFile));
+
+                        _context.RecipeFiles.Add(recipeFile);
+                        _context.SaveChanges();
+                    }
                 }
             }
+
             return RedirectToAction("Index", "Recipe");
         }
     }
