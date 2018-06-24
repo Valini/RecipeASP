@@ -33,7 +33,7 @@ namespace RecipeWorld.Controllers
 
             return View(viewModel);
         }
-
+/*Here
         [HttpPost]
         public ActionResult Save(RecipeFormViewModel viewModel)
         {
@@ -54,7 +54,7 @@ namespace RecipeWorld.Controllers
             recipe.ModifiedDate = DateTime.Now;
             recipe.ViewCount = 0;
             */
-            recipe = _context.Recipes.Add(recipe);
+          /*HEre  recipe = _context.Recipes.Add(recipe);
 
             _context.SaveChanges();
 
@@ -79,6 +79,6 @@ namespace RecipeWorld.Controllers
             }
 
             return RedirectToAction("Index", "Recipe");
-        }
+       } Here*/
     }
 }

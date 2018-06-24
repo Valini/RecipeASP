@@ -364,3 +364,4 @@ C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.
 C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.dll
 C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.pdb
 C:\Users\suimi\JAC\GitDirectory\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.removeUserTable.resources
+C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.removeUserTable.resources
