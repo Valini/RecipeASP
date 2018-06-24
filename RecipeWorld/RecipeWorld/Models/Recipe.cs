@@ -17,15 +17,15 @@ namespace RecipeWorld.Models
         [Required]
         public DateTime ModifiedDate { get; set; } = DateTime.Now;
 
-        [Required]
+        [Required(ErrorMessage = "Please enter the title of your recipe!")]
         [MaxLength(255)]
         public String Title { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Explain your recipe, please!")]
         [Display(Name ="Recipe")]
         public String Contents { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please share indredients of your recipe!")]
         public String Ingredients { get; set; }
 
         [Required]
