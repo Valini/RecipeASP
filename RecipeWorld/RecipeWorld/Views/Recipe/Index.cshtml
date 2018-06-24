@@ -1,79 +1,89 @@
-﻿
+﻿@model IEnumerable<RecipeWorld.ViewModels.RecipeViewModel>
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Recipe</h2>
-<div class="row">
-    <div class="col col-sm-4 recipe_img_table">
-        <div class="row">
-            <img src="~/RecipeImageFiles/1_1.jpg" style="width:90%" />
+<style>
+    .image_cell {
+        vertical-align: top;
+    }
+
+    .recipe-cell {
+        padding-bottom: 20px;
+        padding-top: 40px;
+        border-bottom: 1px solid #dff0d8;
+    }
+
+    .crop {
+        height: 300px;
+        overflow: hidden;
+    }
+
+        .crop img {
+            height: auto;
+            width: 400px;
+        }
+
+    .recipe-list {
+        margin-top: 50px;
+        margin-bottom: 200px;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+    }
+</style>
+<div class="recipe-list">
+    @using (Html.BeginForm("Index", "Recipe", FormMethod.Get, new { @class = "form-horizontal" }))
+    {
+        <div class="form-group">
+            <div class="col-sm-12">
+                @Html.TextBox("SearchString", null, new { @class = "form-control", @placeholder = "Search Recipe" })
+            </div>
         </div>
-        <div class="row">
-            <p style="font-size:smaller;">
-                @Html.ActionLink("2018-04-09", "Index", "ReadRecipe", 0, null)
+    }
+
+    @{
+        int cols = 4;
+        int rows = ((Model.Count() % cols) == 0) ? Model.Count() / cols : (Model.Count() / cols) + 1;
+        int index = 0;
+
+        foreach (var viewModel in Model)
+        {
+            if ((index % cols) == 0)
+            {
+                @:<div class="row recipe-cell">
+                }
+                <div class="col-sm-3">
+                    <div class="image_cell crop">
+                        <a href="@Url.Action("Index", "ReadRecipe")">
+                            <img src="~/RecipeImageFiles/@viewModel.RecipeFiles.First().ImgFile" style="width:90%;margin:auto;padding-bottom:10px" />
+                        </a>
+                    </div>
+                    <div style="margin-top:10px;font-weight:bold;color:#d9534f;font-size:smaller;padding:0px 10px;">
+                        <p>@viewModel.Recipe.CreateDate.ToShortDateString()</p>
+                    </div>
+                    <div style="padding:10px 15px;font-family:Arial;">
+                        <a href="@Url.Action("Index", "ReadRecipe")">@viewModel.Recipe.Title</a>
+                    </div>
+                </div>
+                index++;
+            if ((index % cols) == 0)
+            {
+                @:</div>
+            }
+        }
+        if ((index % cols) != 0)
+        {
+            @:</div>
+        }
+        <div style="width:50px;margin:auto;margin-top:50px;">
+            <p>
+                @Html.ActionLink("More Recipe", "Index", "Recipe", new { Page=ViewBag.Page+1 }, new { @class = "btn btn-warning" })
             </p>
         </div>
-        <div class="row">
-            <p>Honey Garlic Salmon Lo Mein Meal Prep Recipe</p>
-        </div>
-    </div>
-    <div class="col col-sm-4 recipe_img_table">
-        <div class="row">
-            <img src="~/RecipeImageFiles/2_1.jpg" style="width:90%" />
-        </div>
-        <div class="row">
-            <p style="font-size:smaller;">2018-04-09</p>
-        </div>
-        <div class="row">
-            <p>Honey Garlic Salmon Lo Mein Meal Prep Recipe</p>
-        </div>
-        </div>
-    <div class="col col-sm-4 recipe_img_table">
-        <div class="row">
-            <img src="~/RecipeImageFiles/3_1.jpg" style="width:90%" />
-        </div>
-        <div class="row">
-            <p style="font-size:smaller;">2018-04-09</p>
-        </div>
-        <div class="row">
-            <p>Honey Garlic Salmon Lo Mein Meal Prep Recipe</p>
-        </div>
-    </div>
-    </div><br />
-<div class="row">
-    <div class="col col-sm-4 recipe_img_table">
-        <div class="row">
-            <img src="~/RecipeImageFiles/4_1.jpg" style="width:90%" />
-        </div>
-        <div class="row">
-            <p style="font-size:smaller;">2018-04-09</p>
-        </div>
-        <div class="row">
-            <p>Honey Garlic Salmon Lo Mein Meal Prep Recipe</p>
-        </div>
-    </div>
-    <div class="col col-sm-4 recipe_img_table">
-        <div class="row">
-            <img src="~/RecipeImageFiles/5_1.jpg" style="width:90%" />
-        </div>
-        <div class="row">
-            <p style="font-size:smaller;">2018-04-09</p>
-        </div>
-        <div class="row">
-            <p>Honey Garlic Salmon Lo Mein Meal Prep Recipe</p>
-        </div>
-    </div>
-    <div class="col col-sm-4 recipe_img_table">
-        <div class="row">
-            <img src="~/RecipeImageFiles/6_1.jpg" style="width:90%" />
-        </div>
-        <div class="row">
-            <p style="font-size:smaller;">2018-04-09</p>
-        </div>
-        <div class="row">
-            <p>Honey Garlic Salmon Lo Mein Meal Prep Recipe</p>
-        </div>
-    </div>
-</div>
 
+    }
+</div>
