@@ -112,7 +112,28 @@ namespace RecipeWorld.Controllers
             return RedirectToAction("Index", "Recipe");
         }
 
+        /*
+        public ActionResult Read(int id)
+        {
+            List<RecipeViewModel> viewModels = new List<RecipeViewModel>();
+
+            var recipe = _context.Recipes.Where(r => r.Id == id).SingleOrDefault();
 
 
+            var recipeFiles = _context.RecipeFiles.Where(rf => rf.RecipeId == recipe.Id).ToList();
+
+            RecipeViewModel viewModel = new RecipeViewModel()
+            {
+                Recipe = recipe,
+                RecipeFiles = recipeFiles
+            };
+
+            viewModels.Add(viewModel);
+
+
+
+            return View(viewModel);
+        }
+        */
     }
 }
