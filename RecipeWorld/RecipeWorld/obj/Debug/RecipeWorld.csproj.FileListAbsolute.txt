@@ -364,6 +364,9 @@ C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.
 C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.dll
 C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.pdb
 C:\Users\suimi\JAC\GitDirectory\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.removeUserTable.resources
+<<<<<<< HEAD
+C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.removeUserTable.resources
+=======
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project-recipe\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.csprojAssemblyReference.cache
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project-recipe\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.InitialMigration.resources
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project-recipe\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.removeUserTable.resources
@@ -487,3 +490,4 @@ C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project-recipe\Recipe
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project-recipe\RecipeASP\RecipeWorld\RecipeWorld\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project-recipe\RecipeASP\RecipeWorld\RecipeWorld\bin\Microsoft.AI.Web.xml
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project-recipe\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.csproj.CopyComplete
+>>>>>>> c47192e9405979ac2070b7ca97481bb1ef95cd91

@@ -24,8 +24,8 @@ namespace RecipeWorld
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/Site.css"));
+                      "~/Content/bootstrap-sandstone.css",
+                      "~/Content/site.css"));
         }
     }
 }

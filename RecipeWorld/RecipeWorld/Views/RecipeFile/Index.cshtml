@@ -1,0 +1,31 @@
+﻿@model RecipeWorld.ViewModels.RecipeFileViewModel
+    {
+    ViewBag.Title = "Index";
+}
+
+<h2>Index-Recipe Files</h2>
+ @*
+    @Model.Recipe.Ingredients
+    @foreach (var recipe in Model.RecipeFiles)
+    {
+        <li>@recipe.ImgFile</li>
+    }*@
+
+  
+
+    @foreach (var recipe in Model.Recipes)
+    {
+
+        @recipe.Title
+        @Html.ActionLink("Read", "Read", "RecipeFile", new { id = recipe.Id }, null)
+    }
+
+  
+    }
+    
+
+
+
+
+
+  
