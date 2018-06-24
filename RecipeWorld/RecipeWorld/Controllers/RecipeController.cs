@@ -14,14 +14,14 @@ namespace RecipeWorld.Controllers
     public class RecipeController : Controller
     {
         private ApplicationDbContext _context;
-
+        public static int NumberOfRecipePerPage = 4;
         public RecipeController()
         {
             _context = new ApplicationDbContext();
         }
 
         // GET: Recipe
-        public ActionResult Index(string SearchString)
+        public ActionResult Index(string SearchString, int Page=1)
         {
             List<RecipeViewModel> viewModels = new List<RecipeViewModel>();
 
@@ -38,6 +38,11 @@ namespace RecipeWorld.Controllers
                 ViewBag.search = SearchString;
             }
 
+            int NumberOfRecipe = NumberOfRecipePerPage * Page;
+            ViewBag.Page = Page;
+
+            recipes = recipes.Take(NumberOfRecipe).ToList();
+
             foreach (var recipe in recipes)
             {
                 var recipeFiles = _context.RecipeFiles.Where(rf => rf.RecipeId == recipe.Id).ToList();
@@ -50,6 +55,7 @@ namespace RecipeWorld.Controllers
                 viewModels.Add(viewModel);
                 
             }
+
 
             return View(viewModels);
         }
@@ -105,5 +111,8 @@ namespace RecipeWorld.Controllers
 
             return RedirectToAction("Index", "Recipe");
         }
+
+
+
     }
 }

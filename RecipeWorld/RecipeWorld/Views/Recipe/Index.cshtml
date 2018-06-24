@@ -10,21 +10,23 @@
 
     .recipe-cell {
         padding-bottom: 20px;
-        padding-top:40px;
+        padding-top: 40px;
         border-bottom: 1px solid #dff0d8;
     }
+
     .crop {
         height: 300px;
         overflow: hidden;
     }
 
-    .crop img {
-        height: auto;
-        width: 400px;
-    }
-    .recipe-list{
-        margin-top:50px;
-        margin-bottom:200px;
+        .crop img {
+            height: auto;
+            width: 400px;
+        }
+
+    .recipe-list {
+        margin-top: 50px;
+        margin-bottom: 200px;
     }
 
     input,
@@ -32,7 +34,6 @@
     textarea {
         max-width: 100%;
     }
-
 </style>
 <div class="recipe-list">
     @using (Html.BeginForm("Index", "Recipe", FormMethod.Get, new { @class = "form-horizontal" }))
@@ -69,14 +70,20 @@
                     </div>
                 </div>
                 index++;
-                if ((index % cols) == 0)
-                {
-                    @:</div>
-                }
+            if ((index % cols) == 0)
+            {
+                @:</div>
+            }
         }
         if ((index % cols) != 0)
         {
             @:</div>
         }
-}
+        <div style="width:50px;margin:auto;margin-top:50px;">
+            <p>
+                @Html.ActionLink("More Recipe", "Index", "Recipe", new { Page=ViewBag.Page+1 }, new { @class = "btn btn-warning" })
+            </p>
+        </div>
+
+    }
 </div>
