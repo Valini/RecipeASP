@@ -291,11 +291,18 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_NavBarSandStone.cshtml" />
+<<<<<<< HEAD
 
     <Content Include="Views\RecipeFile\Index.cshtml" />
 
     <Content Include="Views\Recipe\New.cshtml" />
 
+=======
+    <Content Include="Views\RecipeFile\Index.cshtml" />
+    <Content Include="Views\RecipeFile\Read.cshtml" />
+    <Content Include="Views\Recipe\New.cshtml" />
+    <Content Include="Views\Recipe\Read.cshtml" />
+>>>>>>> 4c9b690f2659e1e5a58a0dc562c028156c7433f9
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

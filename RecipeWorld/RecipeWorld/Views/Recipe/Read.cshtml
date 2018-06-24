@@ -1,0 +1,75 @@
+﻿@model RecipeWorld.ViewModels.RecipeViewModel
+
+@{
+    ViewBag.Title = "Read";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .recipe-image-part{
+        width:100%;
+        margin:auto;
+    }
+
+    .col-sm-4 img {
+        width: 90%;
+    }
+    .recipe-ingredients-part{
+        margin:auto;
+        border:1px solid 
+    }
+    .recipe-paragraph{
+        margin-top:20px;
+    }
+</style>
+<h2>@Model.Recipe.Title</h2>
+
+<div style="padding:10px;">
+    <hr />
+    <div class="row">
+        @foreach (var RecipeFile in Model.RecipeFiles)
+        {
+            <div class="col-sm-4" style="margin:auto;margin-bottom:10px">
+                <img src="~/RecipeImageFiles/@RecipeFile.ImgFile" />
+            </div>
+        }
+    </div>
+    @if (!string.IsNullOrWhiteSpace(Model.Recipe.Ingredients))
+    {
+        var lines = Model.Recipe.Ingredients.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+        <div class="panel panel-warning justify-content-md-center" style="margin:auto;margin-top:50px;margin-bottom:50px;width:90%;">
+            <div class="panel-heading col-sm6">
+                <h3 class="panel-title">Ingredients</h3>
+            </div>
+            <div class="panel-body col-sm6">
+                <ul>
+                    @foreach (var line in lines)
+                    {
+                        <li>@line</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+
+
+    @if (!string.IsNullOrWhiteSpace(Model.Recipe.Contents))
+    {
+        var lines = Model.Recipe.Contents.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+        <div style="margin-bottom:50px;">
+        @foreach (var line in lines)
+        {
+            <div class="recipe-paragraph">@line</div>
+        }
+        </div>
+    }
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<div class="comments" id="comment_div">
+
+</div>
