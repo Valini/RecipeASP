@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using RecipeWorld.Models;
-using RecipeWorld.ViewModel;
+using RecipeWorld.ViewModels;
 
 namespace RecipeWorld.Controllers
 {
@@ -19,26 +19,32 @@ namespace RecipeWorld.Controllers
         {
             _context = new ApplicationDbContext();
         }
-
         // GET: ReadRecipe
-        public ActionResult Index(int id)
+        public ActionResult Index(int id )
         {
             // Get the specified recipe
-            var recipeInDB = _context.Recipes.SingleOrDefault(r => r.Id == id);
+            List<RecipeViewModel> viewModels = new List<RecipeViewModel>();
 
-            if (recipeInDB == null)
+            var recipe = _context.Recipes.Where(r => r.Id == id).SingleOrDefault();
+
+
+            var recipeFiles = _context.RecipeFiles.Where(rf => rf.RecipeId == recipe.Id).ToList();
+
+            if (recipe == null || recipeFiles==null)
             {
                 return HttpNotFound();
-
             }
 
-            var viewModel = new RecipeFormViewModel
+            RecipeViewModel viewModel = new RecipeViewModel()
             {
-                Recipe = recipeInDB,
-                //RecipeFiles = _context.RecipeFiles.ToList() // Get the image of recipe
+                Recipe = recipe,
+                RecipeFiles = recipeFiles
             };
 
+            viewModels.Add(viewModel);
+
             return View(viewModel);
+ 
         }
     }
 }

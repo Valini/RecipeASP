@@ -1,8 +1,32 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+
 }
-<div id="TitleHome">
-    <h1 >WELCOME TO THE WORLD RECIPES BLOG</h1>
+
+<style>
+    #TitleHome {
+       text-align:center;
+    }
+    .carousel-caption {
+        background-color:aliceblue;
+    }
+    .text-success {
+        font-size:xx-large;
+    }
+    .page-header  {
+        text-align:center;
+    }
+
+    .page-header p {
+        font-size:x-large;
+    }
+    .btn btn-success btn-lg {
+        font-size:large;
+    }
+</style>
+
+<div id="TitleHome"  class="jumbotron">
+    <h1 >WELCOME TO <br />THE WORLD RECIPES BLOG</h1>
 </div>
 <br />
 <br />
@@ -20,24 +44,24 @@
             
             <img src="~/RecipeImageFiles/1_1.jpg" alt="Recipe 1" style="width:100%; height:80%">
             <div class="carousel-caption" >
-                <h3>Sushi recipes</h3>
-                <p>Recipes for all tastes</p>
+                <h3 class="text-success">Recipes for all tastes</h3>
+                
             </div>
         </div>
 
         <div class="item">
             <img src="~/RecipeImageFiles/2_1.jpg" alt="Recipe 2" style="width:100%;height:80%">
-            <div class="carousel-caption" style="background-color:lightgoldenrodyellow">
-                <h3>Chow Mein</h3>
-                <p>Recipes from around the world</p>
+            <div class="carousel-caption" >
+                <h3 class="text-success">Recipes from around the world</h3>
+                
             </div>
         </div>
 
         <div class="item">           
             <img src="~/RecipeImageFiles/3_1.jpg" alt="Recipe 3" style="width:100%;height:80%">
-            <div class="carousel-caption" style="background-color:navy">
-                <h3 class="text-success">Falafel</h3>
-                <p class="text-success">Recipes for all occasions</p>
+            <div class="carousel-caption" >
+                <h3 class="text-success">Recipes for all occasions</h3>
+                
             </div>
         </div>
     </div>
@@ -53,25 +77,13 @@
     </a>
 </div>
 
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+<div class="page-header">
+    <h1>Enter our World of Recipes</h1>
+    <p>Come join us in our culinary adventures around the world where we'll be using simple, fresh ingredients, and transforming them into sophisticated and elegant meals for the everyday home cook.</p>
+  
+    @Html.ActionLink("ENTER HERE", "Index", "Recipe", new { @class = "btn btn-success btn-lg" })
 </div>
+
+
+
+
