@@ -1,4 +1,6 @@
 ﻿using RecipeWorld.Models;
+using RecipeWorld.ViewModels;
+
 using RecipeWorld.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -17,11 +19,41 @@ namespace RecipeWorld.Controllers
         {
             _context = new ApplicationDbContext();
         }
+
         // GET: Recipe
-        public ActionResult Index()
+        public ActionResult Index(string SearchString)
         {
-            return View();
+            List<RecipeViewModel> viewModels = new List<RecipeViewModel>();
+
+            var recipes = _context.Recipes.ToList();
+
+            if (!string.IsNullOrWhiteSpace(SearchString))
+            {
+                var tmp = recipes.AsQueryable();
+                // in LINQ
+                tmp = (from r in tmp where r.Title.Contains(SearchString) || r.Contents.Contains(SearchString) || r.Ingredients.Contains(SearchString) select r);
+
+                recipes = tmp.ToList();
+
+                ViewBag.search = SearchString;
+            }
+
+            foreach (var recipe in recipes)
+            {
+                var recipeFiles = _context.RecipeFiles.Where(rf => rf.RecipeId == recipe.Id).ToList();
+
+                RecipeViewModel viewModel = new RecipeViewModel()
+                {
+                    Recipe = recipe,
+                    RecipeFiles = recipeFiles
+                };
+                viewModels.Add(viewModel);
+                
+            }
+
+            return View(viewModels);
         }
+
         // GET: WriteRecipe
         public ActionResult New()
         {

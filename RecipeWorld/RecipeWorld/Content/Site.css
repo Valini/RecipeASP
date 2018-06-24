@@ -1,5 +1,4 @@
 ﻿body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -23,7 +22,6 @@ textarea {
     max-width: 400px;
 }
 
-<<<<<<< HEAD
 form div{
     margin-bottom:10px;
 }
@@ -31,5 +29,3 @@ form div{
 .carousel-caption {
     background-color:navy;
 }
-=======
->>>>>>> 29afcad2b6a97749e37b918cf640f910efcf36ad
