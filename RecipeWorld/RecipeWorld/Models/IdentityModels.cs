@@ -23,6 +23,7 @@ namespace RecipeWorld.Models
         public DbSet<Recipe> Recipes { get; set; }
         public DbSet<RecipeComment> Comments { get; set; }
         public DbSet<RecipeFile> RecipeFiles { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
