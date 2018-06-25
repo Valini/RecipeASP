@@ -190,6 +190,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ReadRecipeController.cs" />
@@ -207,8 +208,17 @@
     <Compile Include="Migrations\201806231851055_removeUserTable.Designer.cs">
       <DependentUpon>201806231851055_removeUserTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806242326141_addContactModel.cs" />
+    <Compile Include="Migrations\201806242326141_addContactModel.Designer.cs">
+      <DependentUpon>201806242326141_addContactModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806242328595_addContactAnnotations.cs" />
+    <Compile Include="Migrations\201806242328595_addContactAnnotations.Designer.cs">
+      <DependentUpon>201806242328595_addContactAnnotations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\RecipeComment.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -221,10 +231,57 @@
     <Compile Include="ViewModels\RecipeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\About\css\bootstrap.css" />
+    <Content Include="Content\About\css\font-awesome.css" />
+    <Content Include="Content\About\css\jquery.countdown.css" />
+    <Content Include="Content\About\css\lightbox.css" />
+    <Content Include="Content\About\css\owl.carousel.css" />
+    <Content Include="Content\About\css\popup-box.css" />
+    <Content Include="Content\About\css\style.css" />
+    <Content Include="Content\About\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\About\images\ab1.jpg" />
+    <Content Include="Content\About\images\arr.png" />
+    <Content Include="Content\About\images\b1.jpg" />
+    <Content Include="Content\About\images\c1.jpg" />
+    <Content Include="Content\About\images\c2.jpg" />
+    <Content Include="Content\About\images\c3.jpg" />
+    <Content Include="Content\About\images\close.jpg" />
+    <Content Include="Content\About\images\close.png" />
+    <Content Include="Content\About\images\cnt.jpg" />
+    <Content Include="Content\About\images\e1.jpg" />
+    <Content Include="Content\About\images\e2.jpg" />
+    <Content Include="Content\About\images\e3.jpg" />
+    <Content Include="Content\About\images\e4.jpg" />
+    <Content Include="Content\About\images\evn1.jpg" />
+    <Content Include="Content\About\images\g1.jpg" />
+    <Content Include="Content\About\images\g2.jpg" />
+    <Content Include="Content\About\images\g3.jpg" />
+    <Content Include="Content\About\images\g4.jpg" />
+    <Content Include="Content\About\images\g5.jpg" />
+    <Content Include="Content\About\images\g6.jpg" />
+    <Content Include="Content\About\images\img-sprite.png" />
+    <Content Include="Content\About\images\left-arrow.png" />
+    <Content Include="Content\About\images\right-arrow.png" />
+    <Content Include="Content\About\images\t1.jpg" />
+    <Content Include="Content\About\images\t2.jpg" />
+    <Content Include="Content\About\images\t3.jpg" />
+    <Content Include="Content\About\images\video.jpg" />
+    <Content Include="Content\About\js\bootstrap.js" />
+    <Content Include="Content\About\js\easing.js" />
+    <Content Include="Content\About\js\jquery-2.2.3.min.js" />
+    <Content Include="Content\About\js\jquery.countdown.js" />
+    <Content Include="Content\About\js\jquery.magnific-popup.js" />
+    <Content Include="Content\About\js\lightbox-plus-jquery.min.js" />
+    <Content Include="Content\About\js\move-top.js" />
+    <Content Include="Content\About\js\owl.carousel.js" />
+    <Content Include="Content\About\js\responsiveslides.min.js" />
+    <Content Include="Content\About\js\script.js" />
     <Content Include="Content\bootstrap-sandstone.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min-sandstone.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Contact\css\style.css" />
+    <Content Include="Content\Contact\images\2.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -241,6 +298,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\About\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\About\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\About\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\About\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\About\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -291,18 +353,14 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_NavBarSandStone.cshtml" />
-
-
     <Content Include="Views\RecipeFile\Index.cshtml" />
-
     <Content Include="Views\Recipe\New.cshtml" />
-
-
     <Content Include="Views\RecipeFile\Index.cshtml" />
     <Content Include="Views\RecipeFile\Read.cshtml" />
     <Content Include="Views\Recipe\New.cshtml" />
     <Content Include="Views\Recipe\Read.cshtml" />
-
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -327,6 +385,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806231851055_removeUserTable.resx">
       <DependentUpon>201806231851055_removeUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806242326141_addContactModel.resx">
+      <DependentUpon>201806242326141_addContactModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806242328595_addContactAnnotations.resx">
+      <DependentUpon>201806242328595_addContactAnnotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
