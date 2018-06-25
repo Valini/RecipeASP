@@ -358,10 +358,7 @@
     <Content Include="Views\Recipe\New.cshtml" />
     <Content Include="Views\Recipe\New.cshtml" />
     <Content Include="Views\Recipe\Read.cshtml" />
-    <Content Include="Views\RecipeFile\Index.cshtml" />
     <Content Include="Views\Recipe\New.cshtml" />
-    <Content Include="Views\RecipeFile\Index.cshtml" />
-    <Content Include="Views\RecipeFile\Read.cshtml" />
     <Content Include="Views\Recipe\New.cshtml" />
     <Content Include="Views\Recipe\Read.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
