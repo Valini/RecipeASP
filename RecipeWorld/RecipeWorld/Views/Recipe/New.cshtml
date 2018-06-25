@@ -50,14 +50,26 @@
         max-width: 350px;
         margin: auto;
         margin-top: 10px;
+
+
     }
+    .btn_file:hover {
+        background-color: #3e8e41
+    }
+
+    .btn_file:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+    
 </style>
 @using (Html.BeginForm("Save", "Recipe", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <fieldset class="form-horizontal">
         @if (Model.Recipe.Id == 0)
         {
-            <legend>Share your secrete recipe</legend>
+            <legend>Share your secret recipe</legend>
         }
         else
         {
@@ -100,7 +112,7 @@
         </div>
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-3">
-                <button type="submit" class="btn btn-primary">Save Recipe</button>
+                <button type="submit" class="btn btn-success">Save Recipe</button>
             </div>
         </div>
     </fieldset>

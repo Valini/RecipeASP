@@ -245,6 +245,7 @@ C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project\RecipeASP\Rec
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.pdb
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.addContactModel.resources
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.addContactAnnotations.resources
+<<<<<<< HEAD
 C:\Users\suimi\JAC\GitDirectory\RecipeASP\RecipeWorld\RecipeWorld\bin\ApplicationInsights.config
 C:\Users\suimi\JAC\GitDirectory\RecipeASP\RecipeWorld\RecipeWorld\bin\RecipeWorld.dll.config
 C:\Users\suimi\JAC\GitDirectory\RecipeASP\RecipeWorld\RecipeWorld\bin\RecipeWorld.dll
@@ -370,3 +371,8 @@ C:\Users\suimi\JAC\GitDirectory\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\Reci
 C:\Users\suimi\JAC\GitDirectory\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.csproj.CopyComplete
 C:\Users\suimi\JAC\GitDirectory\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.dll
 C:\Users\suimi\JAC\GitDirectory\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.pdb
+=======
+C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.addContactModel.resources
+C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.addContactAnnotations.resources
+C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.fixbuild.resources
+>>>>>>> origin/master
