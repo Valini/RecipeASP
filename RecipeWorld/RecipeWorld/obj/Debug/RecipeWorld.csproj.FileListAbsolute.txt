@@ -245,3 +245,6 @@ C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project\RecipeASP\Rec
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.pdb
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.addContactModel.resources
 C:\Users\Aneeta\Documents\Bitbucket-Git\2018-ipd12-asp.net-project\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.addContactAnnotations.resources
+C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.addContactModel.resources
+C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.addContactAnnotations.resources
+C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.fixbuild.resources

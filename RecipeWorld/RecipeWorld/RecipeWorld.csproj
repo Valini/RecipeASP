@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201806242328595_addContactAnnotations.Designer.cs">
       <DependentUpon>201806242328595_addContactAnnotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806251400150_fixbuild.cs" />
+    <Compile Include="Migrations\201806251400150_fixbuild.Designer.cs">
+      <DependentUpon>201806251400150_fixbuild.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -351,11 +355,9 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_NavBarSandStone.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Recipe\New.cshtml" />
     <Content Include="Views\Recipe\New.cshtml" />
     <Content Include="Views\Recipe\Read.cshtml" />
-=======
     <Content Include="Views\RecipeFile\Index.cshtml" />
     <Content Include="Views\Recipe\New.cshtml" />
     <Content Include="Views\RecipeFile\Index.cshtml" />
@@ -364,7 +366,6 @@
     <Content Include="Views\Recipe\Read.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Contact\Create.cshtml" />
->>>>>>> 68622e1f75ed8a9451f94dce0bde0bf0649eafe7
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -395,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806242328595_addContactAnnotations.resx">
       <DependentUpon>201806242328595_addContactAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806251400150_fixbuild.resx">
+      <DependentUpon>201806251400150_fixbuild.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
