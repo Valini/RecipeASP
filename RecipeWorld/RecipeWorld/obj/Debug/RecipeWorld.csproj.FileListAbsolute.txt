@@ -376,3 +376,4 @@ C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.
 C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.addContactAnnotations.resources
 C:\Users\Valini\Desktop\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.fixbuild.resources
 >>>>>>> origin/master
+C:\Users\suimi\JAC\GitDirectory\RecipeASP\RecipeWorld\RecipeWorld\obj\Debug\RecipeWorld.Migrations.fixbuild.resources
