@@ -1,0 +1,196 @@
+h3.title {
+    margin-bottom: 34px;
+    font-size: 38px;
+}
+
+h3.title {
+    margin-bottom: 34px;
+}
+
+/*--about--*/
+.welcome-left-left h2 {
+    font-size: 36px;
+    color: #000;
+    font-weight: 400;
+}
+
+.welcome-left-left p {
+    color: #000;
+    font-size: 15px;
+    line-height: 28px;
+    padding: 1.5em 0em 1em 2em;
+    letter-spacing: 1px;
+    background: #93C54B;
+    margin-top: 12px;
+}
+
+.welcome-left-left {
+    margin-bottom: 33px;
+}
+
+.abut-mid-info h3 {
+    font-size: 29px;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding-bottom: 9px;
+    border-bottom: 2px solid #000;
+}
+
+.abut-mid-info p {
+    font-size: 14px;
+    color: #000;
+    line-height: 24px;
+    padding: 17px 0px 10px;
+}
+
+.about-num-left h6 {
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background: #6b61e6;
+    width: 41px;
+    height: 42px;
+    margin: 0 auto;
+    line-height: 41px;
+    border-radius: 50px;
+}
+
+.abbr-info h4 {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+    text-align: left;
+    line-height: 28px;
+}
+
+.white-shadow:nth-child(1), .white-shadow:nth-child(2) {
+    padding-bottom: 1em;
+}
+
+.about-num-left {
+    padding: 0px;
+    width: 63px;
+    padding-top: 6px;
+}
+
+.abut-right-side {
+    background: url(../images/ab1.jpg)no-repeat center;
+    background-size: cover;
+    min-height: 350px;
+    padding: 0px;
+}
+
+    .abut-right-side h5 {
+        font-size: 42px;
+        color: #000;
+        text-align: center;
+        /* background: #ddd; */
+        padding-top: 6em;
+    }
+/*--//about--*/
+/*-- Team Members-- */
+.team, .gallery {
+    background: #93C54B;
+    margin-top: 50px;
+}
+
+.team-members {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+    .team-members .team-avatar {
+        position: relative;
+    }
+
+        .team-members .team-avatar:after {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: " ";
+            position: absolute;
+            background: rgba(129, 129, 129, 0.1);
+            transition-duration: 300ms;
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+        }
+
+        .team-members .team-avatar img {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+    .team-members .team-desc {
+        text-align: center;
+        bottom: 8em;
+        width: 100%;
+        padding: 0 20px;
+        position: absolute;
+        opacity: 0;
+        transform: translate3d(0, 10%, 0);
+        transition: opacity 0.3s;
+    }
+
+        .team-members .team-desc h4 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 0 10px;
+            color: #fff;
+        }
+
+        .team-members .team-desc p {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+    .team-members:hover .team-avatar:after {
+        background: rgba(47, 60, 72, 0.5);
+        transition-duration: 300ms;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+    }
+
+    .team-members:hover .team-desc {
+        -webkit-transform: translate3d(0, -5%, 0);
+        transform: translate3d(0, -5%, 0);
+        -webkit-transform: translate3d(0, -10%, 0);
+        transform: translate3d(0, -10%, 0);
+    }
+
+    .team-members:hover .team-desc {
+        opacity: 1;
+        transition: all 0.4s;
+    }
+
+.team-icons ul li {
+    display: inline-block;
+    text-align: center;
+    border: none;
+    width: 36px;
+    height: 36px;
+    margin: 0px 8px;
+    background: #fff;
+    line-height: 34px;
+    border-radius: 50px;
+    transition: 0.5s all;
+}
+
+    .team-icons ul li a {
+        font-size: 15px;
+        color: #000;
+    }
+
+    .team-icons ul li:hover {
+        background: #93C54B;
+    }
+
+.team-icons {
+    padding-top: 1.2em;
+}
+/*--Team Members-- */

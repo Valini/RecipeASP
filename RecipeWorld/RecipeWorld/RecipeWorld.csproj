@@ -233,13 +233,7 @@
     <Compile Include="ViewModels\RecipeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\About\css\bootstrap.css" />
-    <Content Include="Content\About\css\font-awesome.css" />
-    <Content Include="Content\About\css\jquery.countdown.css" />
-    <Content Include="Content\About\css\lightbox.css" />
-    <Content Include="Content\About\css\owl.carousel.css" />
-    <Content Include="Content\About\css\popup-box.css" />
-    <Content Include="Content\About\css\style.css" />
+    <Content Include="Content\About\css\about.css" />
     <Content Include="Content\About\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\About\images\ab1.jpg" />
     <Content Include="Content\About\images\arr.png" />
@@ -268,26 +262,15 @@
     <Content Include="Content\About\images\t2.jpg" />
     <Content Include="Content\About\images\t3.jpg" />
     <Content Include="Content\About\images\video.jpg" />
-    <Content Include="Content\About\js\bootstrap.js" />
-    <Content Include="Content\About\js\easing.js" />
-    <Content Include="Content\About\js\jquery-2.2.3.min.js" />
-    <Content Include="Content\About\js\jquery.countdown.js" />
-    <Content Include="Content\About\js\jquery.magnific-popup.js" />
-    <Content Include="Content\About\js\lightbox-plus-jquery.min.js" />
-    <Content Include="Content\About\js\move-top.js" />
-    <Content Include="Content\About\js\owl.carousel.js" />
-    <Content Include="Content\About\js\responsiveslides.min.js" />
-    <Content Include="Content\About\js\script.js" />
     <Content Include="Content\bootstrap-sandstone.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min-sandstone.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Contact\css\style.css" />
-    <Content Include="Content\Contact\images\2.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\site.css" />
+    <Content Include="Images\contact.png" />
     <Content Include="Images\pencil2.gif" />
     <Content Include="RecipeImageFiles\1_1.jpg" />
     <Content Include="RecipeImageFiles\2_1.jpg" />
@@ -361,8 +344,8 @@
     <Content Include="Views\Recipe\New.cshtml" />
     <Content Include="Views\Recipe\New.cshtml" />
     <Content Include="Views\Recipe\Read.cshtml" />
-    <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Contact\Create.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
