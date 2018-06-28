@@ -22,7 +22,7 @@ namespace RecipeWorld.Controllers
         // GET: Contact
         public ActionResult Index()
         {
-            return View();
+            return View(_context.Contacts.ToList());
         }
 
         public ActionResult Create()
@@ -30,7 +30,7 @@ namespace RecipeWorld.Controllers
             return View(new Contact());
         }
 
-        [HttpPost]
+        [HttpPost] 
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Contact model)
         {
@@ -38,7 +38,7 @@ namespace RecipeWorld.Controllers
             {
                 _context.Contacts.Add(model);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Contact");
             }
             return View(model);
         }
